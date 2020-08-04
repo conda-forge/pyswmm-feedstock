@@ -1,5 +1,5 @@
 {% set name = "pyswmm" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d4814caddeefe38bad421d792a26d6e9bed9945436cdbfaa9847193e0808f98c
+  sha256: e82572bcf9de951272d24efd216b88ef473bcad717a72639d0a73779cb94253d
   patches:
     - __init__.py.patch
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -29,7 +29,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Python Wrapper for SWMM5 API'
+  summary: Python Wrapper for SWMM5 API
   doc_url: https://pyswmm.readthedocs.io
   dev_url: https://github.com/OpenWaterAnalytics/pyswmm/
 

@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: a8034b9d9b9bf42867c75564a07c386864618dadbb3560e2da902a195422d5f2
-  patches:
-    - __init__.py.patch
 
 build:
   noarch: python
@@ -23,6 +21,15 @@ requirements:
   run:
     - six
     - swmm
+
+test:
+  imports:
+    - pyswmm
+    - pyswmm.lib
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/OpenWaterAnalytics/pyswmm/wiki

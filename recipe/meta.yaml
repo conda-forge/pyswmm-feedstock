@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a8034b9d9b9bf42867c75564a07c386864618dadbb3560e2da902a195422d5f2
+  url: https://github.com/lrntct/pyswmm/releases/download/v{{ version }}%2Blocallib01/{{ name }}-{{ version }}+locallib01.tar.gz
+  sha256: 6c34d347d217342f7504fa630a58ceb9a097e59a8d2847f1d4db2a14e9077780
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:

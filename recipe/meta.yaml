@@ -27,7 +27,6 @@ requirements:
 test:
   imports:
     - pyswmm
-    - pyswmm.lib
   commands:
     - pip check
   requires:

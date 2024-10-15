@@ -1,7 +1,5 @@
-import sys
-import pyswmm
+from pyswmm import Simulation
+from pyswmm.tests.data import MODEL_WEIR_SETTING_PATH
 
-try:
-    pyswmm.Simulation('')
-except pyswmm.swmm5.SWMMException:
-    pass
+sim = Simulation(MODEL_WEIR_SETTING_PATH)
+sim.execute()

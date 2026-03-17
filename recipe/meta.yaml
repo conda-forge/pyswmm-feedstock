@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=68.2
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - swmm-toolkit >=0.9.0
     - julian >=0.14
     - aenum >=3.1.11
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/OpenWaterAnalytics/pyswmm/wiki

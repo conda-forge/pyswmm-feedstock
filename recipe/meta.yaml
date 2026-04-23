@@ -1,5 +1,5 @@
 {% set name = "pyswmm" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyswmm-{{ version }}.tar.gz
-  sha256: b85eb4ac459d67f1a268af8242f9f38ac85dd6e20d6171de008acb7b6b88af0f
+  sha256: 1c3e1f7532a912a3ae8318713e35444a5bde1033bc0ed1d3567dfa35b5b6b36a
 
 build:
   noarch: python
